@@ -594,12 +594,3 @@ U57,        HEX 0F57
 U65,        HEX 0F65
 U66,        HEX 0F66
 U67,        HEX 0F67
-
-
-
-
-O programa utiliza lógica baseada em subtração para comparação 
-de valores, estruturas condicionais e algoritimos iterativos para 
-multipicação e divisão. Além disso , realizaa decomposição do 
-resultado em dezenas e unidades por meio de divisões sucessivas 
-por 10 para exibição no display.
