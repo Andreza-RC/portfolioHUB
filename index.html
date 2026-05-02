@@ -7,68 +7,68 @@
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #0f172a, #1e293b);
+      font-family: Arial;
+      background: #0f172a;
       color: white;
-      text-align: center;
     }
 
     header {
-      padding: 40px 20px;
+      text-align: center;
+      padding: 50px 20px;
+      background: linear-gradient(135deg, #3b82f6, #9333ea);
     }
 
-    h1 {
-      font-size: 36px;
-      margin-bottom: 10px;
+    header h1 {
+      margin: 0;
+      font-size: 40px;
     }
 
-    p {
-      color: #cbd5f5;
+    header p {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+
+    .sobre {
+      text-align: center;
+      padding: 30px;
+      max-width: 600px;
+      margin: auto;
     }
 
     .container {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
+      flex-wrap: wrap;
       gap: 20px;
       padding: 20px;
     }
 
     .card {
       background: #1e293b;
-      border-radius: 15px;
+      border-radius: 12px;
       padding: 20px;
-      width: 250px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+      width: 260px;
+      text-align: center;
       transition: 0.3s;
     }
 
     .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .card h2 {
-      margin-bottom: 10px;
+      transform: scale(1.05);
     }
 
     .btn {
       display: inline-block;
       margin-top: 10px;
-      padding: 10px 15px;
+      padding: 10px;
       background: #3b82f6;
       color: white;
       text-decoration: none;
       border-radius: 8px;
     }
 
-    .btn:hover {
-      background: #2563eb;
-    }
-
     footer {
-      margin-top: 40px;
+      text-align: center;
       padding: 20px;
-      font-size: 14px;
       color: #94a3b8;
     }
   </style>
@@ -76,36 +76,44 @@
 
 <body>
 
-  <header>
-    <h1>👩‍💻 Andreza Rodrigues</h1>
-    <p>Estudante de Tecnologia | Portfólio de Projetos</p>
-  </header>
+<header>
+  <h1>👩‍💻 Andreza Rodrigues</h1>
+  <p>Estudante de Tecnologia | Desenvolvedora em formação</p>
+</header>
 
-  <div class="container">
+<section class="sobre">
+  <h2>Sobre mim</h2>
+  <p>
+    Sou estudante de tecnologia, apaixonada por desenvolvimento e criação de projetos.
+    Este portfólio reúne meus trabalhos acadêmicos e pessoais.
+  </p>
+</section>
 
-    <div class="card">
-      <h2>🏨 Sistema de Hotel</h2>
-      <p>Projeto acadêmico de simulação de reservas.</p>
-      <a class="btn" href="projetos-academicos/sistema-hotel/Sistema-hotel.pdf">Ver Projeto</a>
-    </div>
+<section class="container">
 
-    <div class="card">
-      <h2>🧮 Calculadora</h2>
-      <p>Projeto com operações matemáticas.</p>
-      <a class="btn" href="projetos-academicos/calculadora-marie.jr/calculadoraOAC.mas">Ver Projeto</a>
-    </div>
-
-    <div class="card">
-      <h2>🌐 Portfólio Web</h2>
-      <p>Site pessoal com apresentação de projetos.</p>
-      <a class="btn" href="projetos-pessoais/site-portifolio/index.html">Ver Site</a>
-    </div>
-
+  <div class="card">
+    <h3>🏨 Sistema de Hotel</h3>
+    <p>Simulação de reservas.</p>
+    <a class="btn" href="projetos-academicos/sistema-hotel/Sistema-hotel.pdf">Ver</a>
   </div>
 
-  <footer>
-    © 2026 - Andreza Rodrigues
-  </footer>
+  <div class="card">
+    <h3>🧮 Calculadora</h3>
+    <p>Operações matemáticas.</p>
+    <a class="btn" href="projetos-academicos/calculadora-marie.jr/calculadoraOAC.mas">Ver</a>
+  </div>
+
+  <div class="card">
+    <h3>🌐 Portfólio Web</h3>
+    <p>Site pessoal.</p>
+    <a class="btn" href="projetos-pessoais/site-portifolio/index.html">Ver</a>
+  </div>
+
+</section>
+
+<footer>
+  © 2026 - Andreza Rodrigues
+</footer>
 
 </body>
 </html>
