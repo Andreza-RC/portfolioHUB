@@ -1,7 +1,111 @@
-<h1>Meu Portfólio</h1>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfólio - Andreza</title>
 
-<ul>
-  <li><a href="projetos-academicos/sistema-hotel/">Sistema de Hotel</a></li>
-  <li><a href="projetos-academicos/calculadora-marie.jr/">Calculadora</a></li>
-  <li><a href="projetos-pessoais/site-portifolio/">Portfólio Web</a></li>
-</ul>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: white;
+      text-align: center;
+    }
+
+    header {
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #cbd5f5;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .card {
+      background: #1e293b;
+      border-radius: 15px;
+      padding: 20px;
+      width: 250px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h2 {
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      background: #3b82f6;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+
+    .btn:hover {
+      background: #2563eb;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      font-size: 14px;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>👩‍💻 Andreza Rodrigues</h1>
+    <p>Estudante de Tecnologia | Portfólio de Projetos</p>
+  </header>
+
+  <div class="container">
+
+    <div class="card">
+      <h2>🏨 Sistema de Hotel</h2>
+      <p>Projeto acadêmico de simulação de reservas.</p>
+      <a class="btn" href="projetos-academicos/sistema-hotel/Sistema-hotel.pdf">Ver Projeto</a>
+    </div>
+
+    <div class="card">
+      <h2>🧮 Calculadora</h2>
+      <p>Projeto com operações matemáticas.</p>
+      <a class="btn" href="projetos-academicos/calculadora-marie.jr/calculadoraOAC.mas">Ver Projeto</a>
+    </div>
+
+    <div class="card">
+      <h2>🌐 Portfólio Web</h2>
+      <p>Site pessoal com apresentação de projetos.</p>
+      <a class="btn" href="projetos-pessoais/site-portifolio/index.html">Ver Site</a>
+    </div>
+
+  </div>
+
+  <footer>
+    © 2026 - Andreza Rodrigues
+  </footer>
+
+</body>
+</html>
