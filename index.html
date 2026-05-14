@@ -1,178 +1,186 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!DOCTYPE html><html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PortfolioHUB | Andreza Rodrigues</title>
-
+  <title>PortfolioHUB - Andreza Rodrigues</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
-
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior: smooth; }
     body {
-      background: #0f172a;
-      color: white;
-    }
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #020617, #0f172a);
+      color: #e2e8f0;
+    }header {
+  text-align:center;
+  padding:40px 20px;
+  background: linear-gradient(135deg, #0f172a, #1e3a8a);
+}
 
-    header {
-      text-align: center;
-      padding: 60px 20px;
-      background: linear-gradient(135deg, #3b82f6, #9333ea);
-    }
+header img {
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  object-fit:cover;
+  border:4px solid #ec4899;
+  margin-bottom:15px;
+  animation: zoomIn 1s ease;
+}
 
-    header h1 {
-      font-size: 42px;
-      margin-bottom: 10px;
-    }
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity:0; }
+  to { transform: scale(1); opacity:1; }
+}
 
-    header p {
-      font-size: 18px;
-      margin-bottom: 20px;
-    }
+.name {
+  font-size:28px;
+  background: linear-gradient(90deg, #38bdf8, #ec4899, #38bdf8);
+  background-size:200%;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  animation: brilho 3s linear infinite;
+}
 
-    .links a {
-      display: inline-block;
-      margin: 8px;
-      padding: 10px 16px;
-      background: white;
-      color: #0f172a;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-    }
+@keyframes brilho {
+  0% { background-position:0%; }
+  100% { background-position:200%; }
+}
 
-    .links a:hover {
-      background: #e2e8f0;
-    }
+header p { color:#cbd5f5; }
 
-    .sobre {
-      max-width: 800px;
-      margin: auto;
-      text-align: center;
-      padding: 50px 20px;
-    }
+.btn {
+  display:inline-block;
+  margin:8px;
+  padding:10px 15px;
+  background: linear-gradient(135deg, #38bdf8, #ec4899);
+  color:#020617;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:600;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
 
-    .sobre h2 {
-      font-size: 30px;
-      margin-bottom: 15px;
-    }
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow:0 0 15px #ec4899;
+}
 
-    .container {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 25px;
-      padding: 20px;
-    }
+nav {
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  padding:15px;
+  background:#020617;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
 
-    .card {
-      width: 280px;
-      background: #1e293b;
-      border-radius: 14px;
-      padding: 25px;
-      text-align: center;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-      transition: 0.3s;
-    }
+nav a {
+  color:#38bdf8;
+  text-decoration:none;
+  font-weight:600;
+}
 
-    .card:hover {
-      transform: translateY(-8px);
-    }
+section {
+  max-width:900px;
+  margin:auto;
+  padding:40px 20px;
+  opacity:0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
 
-    .icon {
-      font-size: 36px;
-      margin-bottom: 10px;
-    }
+section.show {
+  opacity:1;
+  transform: translateY(0);
+}
 
-    .card h3 {
-      margin-bottom: 10px;
-    }
+h2 {
+  color:#ec4899;
+  margin-bottom:15px;
+}
 
-    .card p {
-      margin-bottom: 15px;
-    }
+.card {
+  background:#1e293b;
+  padding:20px;
+  border-radius:15px;
+  margin-bottom:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
 
-    .btn {
-      display: inline-block;
-      padding: 10px 16px;
-      background: #3b82f6;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-    }
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow:0 0 20px rgba(236,72,153,0.6);
+}
 
-    .btn:hover {
-      background: #2563eb;
-    }
+footer {
+  text-align:center;
+  padding:20px;
+  background:#020617;
+  margin-top:30px;
+  color:#94a3b8;
+}
 
-    footer {
-      text-align: center;
-      padding: 30px;
-      color: #94a3b8;
-    }
   </style>
 </head>
-
-<body>
-
-  <header>
-    <h1>👩‍💻 Andreza Rodrigues</h1>
-    <p>Desenvolvedora em formação | Tecnologia</p>
-
-    <div class="links">
-      <a href="https://github.com/andreza-rc" target="_blank">GitHub</a>
-      <a href="#" target="_blank">LinkedIn</a>
-    </div>
-  </header>
-
-  <section class="sobre">
-    <h2>Sobre Mim</h2>
-    <p>
-      Sou estudante de tecnologia com foco em desenvolvimento e resolução de problemas.
-      Tenho experiência com lógica de programação, versionamento com Git e criação de projetos acadêmicos.
-      Busco oportunidades para aplicar e expandir meus conhecimentos na área.
-    </p>
-  </section>
-
-  <section class="container">
-
-    <div class="card">
-      <div class="icon">🏨</div>
-      <h3>Sistema de Hotel</h3>
-      <p>Simulação de gerenciamento de reservas.</p>
-      <a class="btn" href="projetos-academicos/sistema-hotel/Sistema-hotel.txt" target="_blank">
-        Ver Projeto
-      </a>
-    </div>
-
-    <div class="card">
-      <div class="icon">🧮</div>
-      <h3>Calculadora MARIE</h3>
-      <p>Operações matemáticas em Assembly.</p>
-      <a class="btn" href="projetos-academicos/calculadora-assembly-marie/" target="_blank">
-        Ver Projeto
-      </a>
-    </div>
-
-    <div class="card">
-      <div class="icon">🌐</div>
-      <h3>Portfólio Web</h3>
-      <p>Site pessoal publicado com GitHub Pages.</p>
-      <a class="btn" href="projetos-pessoais/githubweb/index.html" target="_blank">
-        Ver Projeto
-      </a>
-    </div>
-
-  </section>
-
-  <footer>
-    © 2026 - Andreza Rodrigues
-  </footer>
-
-</body>
+<body><header>
+  <img src="foto.jpg" alt="Foto Andreza">
+  <h1 class="name">Andreza Rodrigues de Carvalho ✨</h1>
+  <p>Estudante de Ciência da Computação</p>
+  <a class="btn" href="https://mail.google.com/mail/?view=cm&fs=1&to=andrezacarvalho3620@gmail.com">📧 Email</a>
+  <a class="btn" href="https://www.linkedin.com/in/andreza-rodrigues-9370852b3" target="_blank">LinkedIn</a>
+  <a class="btn" href="https://github.com/Andreza-RC" target="_blank">💻 GitHub</a>
+</header><nav>
+  <a href="#perfil">Perfil</a>
+  <a href="#curriculo">Experiência</a>
+  <a href="#formacao">Formação</a>
+  <a href="#projetos">Projetos</a>
+  <a href="#habilidades">Habilidades</a>
+</nav><section id="perfil">
+  <h2>Perfil</h2>
+  <div class="card">
+    <p>Sou uma profissional dedicada, comprometida e motivada, sempre buscando crescimento na área de tecnologia.</p>
+  </div>
+</section><section id="curriculo">
+  <h2>Experiência</h2>
+  <div class="card">
+    <p>Clínica Interação — Auxiliar de Faturamento</p>
+    <p>Ótica Diego — Vendedora</p>
+    <p>Uni Finanças — Telemarketing</p>
+    <p>Benditta Esmalteria — Recepcionista</p>
+  </div>
+</section><section id="formacao">
+  <h2>Formação</h2>
+  <div class="card">
+    <p>Ciência da Computação — UniCEUB</p>
+    <p>Ensino Médio — CEM 111</p>
+    <p>Técnico em Administração — Anhanguera (Concluído)</p>
+  </div>
+</section><section id="projetos">
+  <h2>Projetos</h2>
+  <div class="card">
+    <p>Exercícios em Python</p>
+    <p>Projetos no MARIE.js</p>
+  </div>
+</section><section id="habilidades">
+  <h2>Habilidades</h2>
+  <div class="card">
+    <p>Python | HTML | Excel | Lógica de Programação</p>
+    <p>Inglês Intermediário | Italiano Básico</p>
+  </div>
+</section><footer>
+  <p>© 2026 - Andreza Rodrigues</p>
+</footer><script>
+  const sections = document.querySelectorAll('section');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  });
+  sections.forEach(sec => observer.observe(sec));
+</script></body>
 </html>
