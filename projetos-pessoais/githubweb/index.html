@@ -1,10 +1,9 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Andreza Rodrigues | Portfólio</title>
+  <title>Portfólio Web | Andreza Rodrigues</title>
 
   <style>
     * {
@@ -17,12 +16,13 @@
     body {
       background: #0f172a;
       color: white;
+      line-height: 1.6;
     }
 
     header {
       text-align: center;
-      padding: 60px 20px;
-      background: linear-gradient(135deg, #3b82f6, #9333ea);
+      padding: 70px 20px;
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
     }
 
     header h1 {
@@ -35,80 +35,65 @@
       margin-bottom: 20px;
     }
 
-    .links a {
+    .btn {
       display: inline-block;
-      margin: 8px;
-      padding: 10px 16px;
+      padding: 12px 18px;
       background: white;
       color: #0f172a;
       text-decoration: none;
       border-radius: 8px;
       font-weight: bold;
+      margin: 8px;
     }
 
-    .links a:hover {
+    .btn:hover {
       background: #e2e8f0;
     }
 
-    .sobre {
-      max-width: 800px;
+    section {
+      max-width: 900px;
       margin: auto;
-      text-align: center;
       padding: 50px 20px;
     }
 
-    .sobre h2 {
-      margin-bottom: 15px;
+    h2 {
+      margin-bottom: 20px;
       font-size: 30px;
+      text-align: center;
     }
 
-    .container {
+    .skills {
       display: flex;
-      justify-content: center;
       flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .skill {
+      background: #1e293b;
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+
+    .projetos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 25px;
-      padding: 20px;
     }
 
     .card {
       width: 280px;
       background: #1e293b;
-      border-radius: 14px;
       padding: 25px;
+      border-radius: 14px;
       text-align: center;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-8px);
-    }
-
-    .icon {
-      font-size: 36px;
-      margin-bottom: 10px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
     }
 
     .card h3 {
       margin-bottom: 10px;
-    }
-
-    .card p {
-      margin-bottom: 15px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 10px 16px;
-      background: #3b82f6;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-    }
-
-    .btn:hover {
-      background: #2563eb;
     }
 
     footer {
@@ -123,64 +108,73 @@
 
   <header>
     <h1>👩‍💻 Andreza Rodrigues</h1>
-    <p>Desenvolvedora em formação | Tecnologia</p>
+    <p>Portfólio Web Pessoal | Desenvolvimento e Tecnologia</p>
 
-    <div class="links">
-      <a href="https://github.com/andreza-rc" target="_blank">GitHub</a>
-      <a href="#" target="_blank">LinkedIn</a>
-    </div>
+    <a class="btn" href="https://github.com/andreza-rc" target="_blank">
+      GitHub
+    </a>
+
+    <a class="btn" href="#" target="_blank">
+      LinkedIn
+    </a>
   </header>
 
-  <section class="sobre">
+  <section>
     <h2>Sobre Mim</h2>
     <p>
-      Sou estudante de tecnologia com foco em desenvolvimento e resolução de problemas.
-      Tenho experiência com lógica de programação, versionamento com Git e criação de projetos acadêmicos.
-      Busco oportunidades para aplicar e expandir meus conhecimentos na área.
+      Sou estudante de tecnologia com foco em desenvolvimento de software,
+      lógica de programação e criação de soluções digitais.
+      Tenho experiência com versionamento Git, desenvolvimento web,
+      projetos acadêmicos e organização de repositórios profissionais.
     </p>
   </section>
 
-  <section class="container">
+  <section>
+    <h2>Habilidades</h2>
 
-    <div class="card">
-      <div class="icon">🏨</div>
-      <h3>Sistema de Hotel</h3>
-      <p>Simulação de gerenciamento de reservas.</p>
-      <a class="btn"
-        href="https://andreza-rc.github.io/portfolioHUB/projetos-academicos/sistema-hotel/Sistema-hotel.txt"
-        target="_blank">
-        Ver Projeto
-      </a>
+    <div class="skills">
+      <div class="skill">HTML5</div>
+      <div class="skill">CSS3</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">Git</div>
+      <div class="skill">GitHub</div>
+      <div class="skill">Lógica de Programação</div>
     </div>
+  </section>
 
-    <div class="card">
-      <div class="icon">🧮</div>
-      <h3>Calculadora MARIE</h3>
-      <p>Operações matemáticas em Assembly.</p>
-      <a class="btn"
-        href="https://andreza-rc.github.io/portfolioHUB/projetos-academicos/calculadora-assembly-marie/"
-        target="_blank">
-        Ver Projeto
-      </a>
+  <section>
+    <h2>Projetos em Destaque</h2>
+
+    <div class="projetos">
+
+      <div class="card">
+        <h3>🏨 Sistema de Hotel</h3>
+        <p>Simulação de gerenciamento de reservas e hospedagens.</p>
+      </div>
+
+      <div class="card">
+        <h3>🧮 Calculadora MARIE</h3>
+        <p>Operações matemáticas desenvolvidas em Assembly.</p>
+      </div>
+
+      <div class="card">
+        <h3>🌐 PortfolioHUB</h3>
+        <p>Repositório com projetos acadêmicos e profissionais.</p>
+      </div>
+
     </div>
+  </section>
 
-    <div class="card">
-      <div class="icon">🌐</div>
-      <h3>Portfólio Web</h3>
-      <p>Site pessoal com GitHub Pages.</p>
-      <a class="btn"
-        href="https://andreza-rc.github.io/portfolioHUB/projetos-pessoais/githubweb/"
-        target="_blank">
-        Ver Projeto
-      </a>
-    </div>
-
+  <section>
+    <h2>Contato</h2>
+    <p style="text-align: center;">
+      Disponível para oportunidades acadêmicas e profissionais na área de tecnologia.
+    </p>
   </section>
 
   <footer>
-    © 2026 - Andreza Rodrigues
+    © 2026 - Andreza Rodrigues | Portfólio Web
   </footer>
 
 </body>
-
 </html>
